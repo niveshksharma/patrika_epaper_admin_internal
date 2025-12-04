@@ -1,0 +1,151 @@
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: linear-gradient(180deg, var(--background) 0%, var(--paper) 100%);
+}
+
+.container {
+    width: 100%;
+    max-width: 28rem;
+    animation: slideUp 0.5s ease-out;
+}
+
+.brand {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.logo svg {
+    width: 2rem;
+    height: 2rem;
+    color: var(--primary-foreground);
+}
+
+.brandTitle {
+    font-size: 1.875rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    color: var(--foreground);
+}
+
+.brandSubtitle {
+    color: var(--muted-foreground);
+    margin-top: 0.5rem;
+}
+
+.card {
+    box-shadow: var(--shadow-elegant);
+    border: none;
+}
+
+.cardHeader {
+    padding: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    color: var(--foreground);
+}
+
+.cardDescription {
+    text-align: center;
+    color: var(--muted-foreground);
+    margin-top: 0.25rem;
+}
+
+.cardContent {
+    padding: 0 1.5rem 1.5rem;
+}
+
+.tabsList {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.inputWrapper {
+    position: relative;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted-foreground);
+    pointer-events: none;
+}
+
+.inputIcon svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+.inputWithIcon {
+    padding-left: 2.25rem;
+}
+
+.hint {
+    font-size: 0.75rem;
+    color: var(--muted-foreground);
+}
+
+.submitButton {
+    margin-top: 0.5rem;
+}
+
+/* Loading state */
+.loadingPage {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+}
+
+.loadingText {
+    color: var(--muted-foreground);
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

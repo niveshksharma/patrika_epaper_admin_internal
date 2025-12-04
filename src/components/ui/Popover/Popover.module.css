@@ -1,0 +1,58 @@
+.popoverWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.trigger {
+  cursor: pointer;
+}
+
+.content {
+  position: absolute;
+  z-index: 50;
+  min-width: 8rem;
+  padding: 0.25rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background-color: var(--card);
+  box-shadow: var(--shadow-lg);
+  animation: fadeIn 0.15s ease-out;
+}
+
+.content.hidden {
+  display: none;
+}
+
+.alignStart {
+  left: 0;
+}
+
+.alignCenter {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.alignEnd {
+  right: 0;
+}
+
+.sideBottom {
+  top: 100%;
+  margin-top: 0.5rem;
+}
+
+.sideTop {
+  bottom: 100%;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-0.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

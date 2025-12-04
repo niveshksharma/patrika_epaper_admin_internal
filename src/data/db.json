@@ -1,0 +1,183 @@
+{
+    "users": [
+        {
+            "id": "user_1",
+            "email": "john@example.com",
+            "password": "password123",
+            "username": "johndoe",
+            "createdAt": "2024-01-15T10:00:00Z"
+        },
+        {
+            "id": "user_2",
+            "email": "jane@example.com",
+            "password": "password456",
+            "username": "janesmith",
+            "createdAt": "2024-01-16T11:00:00Z"
+        }
+    ],
+    "states": [
+        {
+            "id": "state_1",
+            "name": "Maharashtra"
+        },
+        {
+            "id": "state_2",
+            "name": "Gujarat"
+        },
+        {
+            "id": "state_3",
+            "name": "Karnataka"
+        },
+        {
+            "id": "state_4",
+            "name": "Tamil Nadu"
+        },
+        {
+            "id": "state_5",
+            "name": "Delhi"
+        }
+    ],
+    "cities": [
+        {
+            "id": "city_1",
+            "name": "Mumbai",
+            "stateId": "state_1"
+        },
+        {
+            "id": "city_2",
+            "name": "Pune",
+            "stateId": "state_1"
+        },
+        {
+            "id": "city_3",
+            "name": "Nagpur",
+            "stateId": "state_1"
+        },
+        {
+            "id": "city_4",
+            "name": "Ahmedabad",
+            "stateId": "state_2"
+        },
+        {
+            "id": "city_5",
+            "name": "Surat",
+            "stateId": "state_2"
+        },
+        {
+            "id": "city_6",
+            "name": "Bangalore",
+            "stateId": "state_3"
+        },
+        {
+            "id": "city_7",
+            "name": "Mysore",
+            "stateId": "state_3"
+        },
+        {
+            "id": "city_8",
+            "name": "Chennai",
+            "stateId": "state_4"
+        },
+        {
+            "id": "city_9",
+            "name": "Coimbatore",
+            "stateId": "state_4"
+        },
+        {
+            "id": "city_10",
+            "name": "New Delhi",
+            "stateId": "state_5"
+        }
+    ],
+    "epapers": [
+        {
+            "id": "epaper_1",
+            "title": "Mumbai Daily Times",
+            "description": "Latest news and updates from Mumbai metropolitan area",
+            "publicationDate": "2024-12-01",
+            "stateId": "state_1",
+            "cityId": "city_1",
+            "filePath": "/pdfs/mumbai-daily-times.pdf",
+            "thumbnailUrl": null
+        },
+        {
+            "id": "epaper_2",
+            "title": "Pune Express",
+            "description": "Pune's leading daily newspaper covering local and national news",
+            "publicationDate": "2024-12-01",
+            "stateId": "state_1",
+            "cityId": "city_2",
+            "filePath": "/pdfs/pune-express.pdf",
+            "thumbnailUrl": null
+        },
+        {
+            "id": "epaper_3",
+            "title": "Gujarat Samachar",
+            "description": "Comprehensive coverage of Gujarat news and events",
+            "publicationDate": "2024-12-02",
+            "stateId": "state_2",
+            "cityId": "city_4",
+            "filePath": "/pdfs/gujarat-samachar.pdf",
+            "thumbnailUrl": null
+        },
+        {
+            "id": "epaper_4",
+            "title": "Bangalore Mirror",
+            "description": "Your window to Bangalore's happenings",
+            "publicationDate": "2024-12-02",
+            "stateId": "state_3",
+            "cityId": "city_6",
+            "filePath": "/pdfs/bangalore-mirror.pdf",
+            "thumbnailUrl": null
+        },
+        {
+            "id": "epaper_5",
+            "title": "Chennai Chronicle",
+            "description": "Tamil Nadu's trusted news source",
+            "publicationDate": "2024-12-03",
+            "stateId": "state_4",
+            "cityId": "city_8",
+            "filePath": "/pdfs/chennai-chronicle.pdf",
+            "thumbnailUrl": null
+        },
+        {
+            "id": "epaper_6",
+            "title": "Delhi Tribune",
+            "description": "Capital's premier newspaper",
+            "publicationDate": "2024-12-03",
+            "stateId": "state_5",
+            "cityId": "city_10",
+            "filePath": "/pdfs/delhi-tribune.pdf",
+            "thumbnailUrl": null
+        },
+        {
+            "id": "epaper_7",
+            "title": "Surat Times",
+            "description": "Diamond city's daily digest",
+            "publicationDate": "2024-12-04",
+            "stateId": "state_2",
+            "cityId": "city_5",
+            "filePath": "/pdfs/surat-times.pdf",
+            "thumbnailUrl": null
+        },
+        {
+            "id": "epaper_8",
+            "title": "Nagpur Today",
+            "description": "Orange city's morning newspaper",
+            "publicationDate": "2024-12-04",
+            "stateId": "state_1",
+            "cityId": "city_3",
+            "filePath": "/pdfs/nagpur-today.pdf",
+            "thumbnailUrl": null
+        }
+    ],
+    "downloadLogs": [
+        {
+            "id": "log_1",
+            "userId": "user_1",
+            "epaperId": "epaper_1",
+            "downloadedAt": "2024-12-01T14:30:00Z"
+        }
+    ],
+    "sessions": []
+}

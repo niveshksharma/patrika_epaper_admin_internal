@@ -1,0 +1,111 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+.container {
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--primary);
+}
+
+.logo svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--primary-foreground);
+}
+
+.brandText h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  color: var(--foreground);
+  line-height: 1.2;
+}
+
+.brandText p {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .brandText p {
+    display: block;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.userInfo svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.welcomeText {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .welcomeText {
+    display: inline;
+  }
+}
+
+.username {
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.signOutText {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .signOutText {
+    display: inline;
+  }
+}

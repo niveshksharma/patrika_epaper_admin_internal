@@ -1,0 +1,107 @@
+.calendar {
+  padding: 1rem;
+  background-color: var(--card);
+  border-radius: var(--radius);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.monthYear {
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  color: var(--foreground);
+}
+
+.navButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: none;
+  background-color: transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  color: var(--foreground);
+  transition: background-color 0.15s ease;
+}
+
+.navButton:hover {
+  background-color: var(--muted);
+}
+
+.navButton svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0;
+  margin-bottom: 0.5rem;
+}
+
+.weekday {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  text-align: center;
+  padding: 0.25rem;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.125rem;
+}
+
+.day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.875rem;
+  font-family: 'Inter', sans-serif;
+  border: none;
+  background-color: transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  color: var(--foreground);
+  transition: all 0.15s ease;
+}
+
+.day:hover:not(.disabled):not(.selected) {
+  background-color: var(--muted);
+}
+
+.dayOutside {
+  color: var(--muted-foreground);
+  opacity: 0.5;
+}
+
+.selected {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.selected:hover {
+  background-color: var(--primary);
+}
+
+.today {
+  border: 1px solid var(--border);
+}
+
+.disabled {
+  color: var(--muted-foreground);
+  opacity: 0.3;
+  cursor: not-allowed;
+}

@@ -1,0 +1,52 @@
+.filterBar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+}
+
+.searchWrapper {
+    position: relative;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted-foreground);
+    pointer-events: none;
+}
+
+.searchIcon svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+.searchInput {
+    padding-left: 2.25rem;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .filters {
+        flex-direction: row;
+    }
+}
+
+.filterItem {
+    flex: 1;
+}
+
+.clearButton {
+    flex-shrink: 0;
+}
