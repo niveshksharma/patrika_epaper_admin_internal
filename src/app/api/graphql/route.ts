@@ -1,24 +1,34 @@
+// src/app/api/graphql/route.ts
+import { NextRequest } from 'next/server';
 import { ApolloServer } from '@apollo/server';
 import { startServerAndCreateNextHandler } from '@as-integrations/next';
-import { NextRequest } from 'next/server';
-import { resolvers } from '@/graphql/resolvers';
-import { typeDefs } from '@/graphql/schema';
 
-const server = new ApolloServer({
+// 👉 adjust these imports to match your project
+import { typeDefs } from '@/graphql/schema';
+import { resolvers } from '@/graphql/resolvers';
+
+// Create Apollo server
+const apolloServer = new ApolloServer({
     typeDefs,
     resolvers,
 });
 
-const handler = startServerAndCreateNextHandler<NextRequest>(server, {
-    context: async (req) => {
-        // Extract token from Authorization header for authenticated requests
-        const authHeader = req.headers.get('authorization');
-        const token = authHeader?.replace('Bearer ', '');
+// This is the "dual-mode" handler (can handle NextApiRequest or NextRequest)
+const apolloHandler = startServerAndCreateNextHandler<NextRequest>(apolloServer);
 
-        // In a real app, validate token and get userId
-        // For demo, we'll pass the token as context
-        return { token, userId: null };
-    },
-});
+// 🚨 IMPORTANT: do NOT export apolloHandler directly as GET/POST.
+// Wrap it in proper route handlers instead.
 
-export { handler as GET, handler as POST };
+export async function GET(request: NextRequest): Promise<Response> {
+    // apolloHandler(request) returns a Response-like object, but its type is overloaded.
+    const res = await (apolloHandler as any)(request);
+    return res as Response;
+}
+
+export async function POST(request: NextRequest): Promise<Response> {
+    const res = await (apolloHandler as any)(request);
+    return res as Response;
+}
+
+// ❌ NO default export here
+// ❌ NO "export const GET = apolloHandler" or "export { apolloHandler as GET }"
